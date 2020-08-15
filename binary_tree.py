@@ -20,6 +20,36 @@ class BinaryTree:
             new_node.right_child = self.right_child
             self.right_child = new_node
 
+    ## DF - pre_order >> Roo-L-R
+    def pre_order(self):
+        print(self.value)
+
+        if self.left_child:
+            self.left_child.pre_order()
+
+        if self.right_child:
+            self.right_child.pre_order()
+
+    ## DFS - in_order >> L-Roo-R
+    def in_order(self):
+        if self.left_child:
+            self.left_child.in_order()
+
+        print(self.value)
+
+        if self.right_child:
+            self.right_child.in_order()
+    
+    ## DFS - post_order >> L-R-Roo
+    def post_order(self):
+        if self.left_child:
+            self.left_child.post_order()
+
+        if self.right_child:
+            self.right_child.post_order()
+
+        print(self.value)
+
 tree = BinaryTree('a')
 print(tree.value) # a
 print(tree.left_child) # None

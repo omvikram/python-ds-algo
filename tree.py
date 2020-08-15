@@ -14,7 +14,7 @@ rootNode.right = rightNode
 
 ## DFS (Deft First Search algo) - Going deep to the leaf and backtrack.
 
-# inorderTraversal of the tree (Left, Root, Right)
+# inorderTraversal of the tree (Left, Root, Right) => L-Roo-R
 def inorderTraversal(root):
   result = []
   
@@ -31,7 +31,7 @@ def inorderTraversal(root):
   df(root)
   return result
 
-# preorderTraversal of the tree (Root, Left, Right)
+# preorderTraversal of the tree (Root, Left, Right) => Roo-L-R
 def preorderTraversal(root):
   result = []
   
@@ -48,7 +48,7 @@ def preorderTraversal(root):
   df(root)
   return result
 
-# postorderTraversal of the tree (Left, Right, Root)
+# postorderTraversal of the tree (Left, Right, Root) => L-R-Roo
 def postorderTraversal(root):
   result = []
   
