@@ -12,6 +12,8 @@ rightNode = TreeNode(3)
 rootNode.left = leftNode
 rootNode.right = rightNode
 
+## DFS (Deft First Search algo) - Going deep to the leaf and backtrack.
+
 # inorderTraversal of the tree (Left, Root, Right)
 def inorderTraversal(root):
   result = []
