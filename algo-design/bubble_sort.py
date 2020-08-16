@@ -9,8 +9,7 @@ def bubble_sort(list):
                 temp = list[j]
                 list[j] = list[j+1]
                 list[j+1] = temp
-            
+        print(list)   
 
 list = [19,2,31,45,6,11,121,27]
 bubble_sort(list)
-print(list)
