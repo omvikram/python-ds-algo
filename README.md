@@ -13,5 +13,5 @@
 #                                                                        - Array
 #                                                                        - File
 
-# Tree can have further types - Binary Tree, Binary Search Tree (BST)
+# Tree can have further types - Binary Tree, Binary Search Tree (BST) and Heaps
 # Tree will have DFS (Depth First Search - preorder, inorder, postorder) and BFS (Breadth First Search)
