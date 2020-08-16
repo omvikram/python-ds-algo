@@ -1,3 +1,4 @@
+##Just like Tree Binary Tree will have self value, left child and right child
 class BinaryTree:
     def __init__(self, value):
         self.value = value

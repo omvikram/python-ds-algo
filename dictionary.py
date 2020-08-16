@@ -1,3 +1,5 @@
+## In python the Hash table is implemented as Dictionary
+
 # dictionary initialization using {}
 mydict = {'a':1,'b':2}
 
