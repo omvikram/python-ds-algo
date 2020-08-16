@@ -7,7 +7,9 @@ def bsearch(list, start_index, end_index, val):
     else:
         midval = start_index + ((end_index - start_index) // 2)
 
-# Compare the search item with middle most value
+# Compare the search item value with middle indexed item value in a list
+# If less then mid value then search in the first half of the list
+# If greater then search in the second half of the list
 
         if list[midval] > val:
             return bsearch(list, start_index, midval-1,val)
