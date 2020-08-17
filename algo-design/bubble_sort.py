@@ -1,5 +1,7 @@
 ## It is a comparison-based algorithm in which each pair of adjacent elements is compared and 
-## the elements are swapped if they are not in order.
+## the elements are swapped if they are not in order. There are 2 loops in this algo 
+## one which goes reverse order (i) and another in forward order (j), 
+## if item[j] is greater than item[j+1] swap the items
 
 def bubble_sort(list):
     list_length = len(list)

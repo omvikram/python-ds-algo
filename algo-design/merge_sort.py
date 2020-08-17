@@ -1,4 +1,6 @@
-## Merge sort first divides the array into equal halves and then combines them in a sorted manner.
+## Merge sort first divides the array into equal halves and then merge them in a sorted manner.
+## After divisio both partitions are unsorted but during the merge we compare each element and 
+## Compare and add smaller items on new list and remove it from the right/left partition list 
 
 def merge_sort(unsorted_list):
     if len(unsorted_list) <= 1:
