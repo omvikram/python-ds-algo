@@ -1,4 +1,5 @@
-##Just like Tree Binary Tree will have self value, left child and right child
+##Just like Tree, Binary Tree will have self value, left child and right child
+## A tree is Binary Tree only if it has 2 child nodes 
 class BinaryTree:
     def __init__(self, value):
         self.value = value
@@ -21,7 +22,7 @@ class BinaryTree:
             new_node.right_child = self.right_child
             self.right_child = new_node
 
-    ## DF - pre_order >> Roo-L-R
+    ## DFS - pre_order >> Roo-L-R
     def pre_order(self):
         print(self.value)
 

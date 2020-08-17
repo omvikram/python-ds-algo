@@ -1,4 +1,5 @@
-## Just like Tree, BST will have self node, left child and right child
+## Just like Tree, BST will have self node, left child and right child but will have the following relation
+## Left << Root << Right (this rule applies to all the node we insert as well as searching for a node)
 class BinarySearchTree:
     def __init__(self, value):
         self.value = value

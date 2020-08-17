@@ -1,4 +1,4 @@
-# importing "array" for array creations 
+# importing "array" for array creations but in Python mostly list replace the array
 import array 
   
 # creating an array with integer type 
