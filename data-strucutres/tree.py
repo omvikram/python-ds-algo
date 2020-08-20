@@ -1,3 +1,4 @@
+## A tree is a non-linear list data structure which is represented as class in Python
 class TreeNode:
   def __init__(self, val):
     self.val = val

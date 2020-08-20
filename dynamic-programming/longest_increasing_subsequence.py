@@ -27,5 +27,8 @@ def lis(arr):
 
 # Driver program to test above function 
 arr = [10, 22, 9, 33, 21, 50, 41, 60] 
-
-print "Length of lis is", lis(arr)
+arr1 = [16, 3, 5, 19, 10, 14, 12, 0, 15]
+arr2 = [10, 8, 6, 4, 2, 0]
+print ("Length of arr is ", lis(arr))
+print ("Length of arr1 is ", lis(arr1))
+print ("Length of arr2 is ", lis(arr2))

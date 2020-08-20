@@ -27,3 +27,6 @@ wt = [10, 20, 30]
 C = 50
 n = len(val) 
 print(knapSack(C, wt, val, n)) 
+
+# Time Complexity: O(N*W)
+# As redundant calculations of states are avoided.

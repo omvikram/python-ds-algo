@@ -34,3 +34,6 @@ C = 50
 n = len(val) 
 
 print(knapsack(wt, val, C, n)) 
+
+# Time Complexity: O(N*W)
+# where ‘N’ is the number of weight element and ‘W’ is capacity.

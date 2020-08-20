@@ -36,3 +36,5 @@ wt = [10, 20, 30]
 C = 50
 n = len(val) 
 print knapSack(C, wt, val, n) 
+
+#Time Complexity: O(2^n)
