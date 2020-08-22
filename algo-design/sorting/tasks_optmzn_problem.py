@@ -11,7 +11,9 @@
 # # 3
 # # All five tasks cannot be completed within the allowed 65 minutes, but it is possible to accomplish three tasks, 
 # # for example tasks 4, 5, 3 if completed in this order.
+import cProfile
 
+@profile
 def sum_of_resultset(mylist):
     sum = 0
     diff = 0
@@ -24,7 +26,7 @@ def sum_of_resultset(mylist):
     total_sum = sum + abs(diff)
     return total_sum
 
-
+@profile
 def maximum_completed_tasks(n, t, task_difficulties, result_list):
     if(n > 1):
         task_difficulties.sort()
@@ -48,8 +50,8 @@ def maximum_completed_tasks(n, t, task_difficulties, result_list):
         if(t - min_item_sum > next_min_item):
             task_difficulties.remove(min_item)
             maximum_completed_tasks(n - 1, t, task_difficulties, result_list)
-        else:
-            return result_list
+
+    return len(result_list)
 
 
 print(maximum_completed_tasks(5, 65, [24,23,22,10,20], []))
