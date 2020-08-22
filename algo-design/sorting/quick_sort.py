@@ -2,6 +2,8 @@
 ## and places all smaller (smaller than pivot) to left of pivot and all greater elements to right of pivot 
 ## Selecting a Pivot and Partitioning is very important in Quick Sort where each partition try to adjust the 
 ## small items on the left of the Pivot and bigger items on the right of the Pivot 
+## Time Complexity - O(n**2)
+
 def partition(mylist,low,high): 
 	i = (low-1)
 	pivot = mylist[high]

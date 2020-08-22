@@ -1,6 +1,7 @@
 ## Merge sort first divides the array into equal halves and then merge them in a sorted manner.
 ## After divisio both partitions are unsorted but during the merge we compare each element and 
 ## Compare and add smaller items on new list and remove it from the right/left partition list 
+## Time Complexity - O(nlogn)
 
 def merge_sort(unsorted_list):
     if len(unsorted_list) <= 1:
@@ -19,7 +20,6 @@ def merge_sort(unsorted_list):
     return list(merge(left_list, right_list))
 
 # Merge the sorted halves
-
 def merge(left_half,right_half):
 
     res = []

@@ -1,5 +1,9 @@
-# Python program for implementation of Selection Sort 
-# Pick each item and Compare with every other item and then swap if found greater than other items  
+## Function for implementation of Selection Sort 
+## Traverse through all array elements 
+## Find the minimum element in remaining unsorted array
+## Swap the found minimum element with the first element	
+## Time Complexity - O(n**2)
+
 import sys 
 A = [64, 25, 12, 22, 11] 
 
