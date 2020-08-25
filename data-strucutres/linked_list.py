@@ -1,32 +1,64 @@
-class ListNode:
-  def _init_(self,val):
-    self.val = val
-    self.next = None
+# Python program to create linked list and its main functionality
+# push, pop and print the linked list
 
-# initiation of linked list
-headNode = ListNode(1)
-secondNode = ListNode(2)
-thirdNode = ListNode(3)
+# Node class 
+class Node: 
+    # Constructor to initialize 
+    # the node object 
+    def __init__(self, data): 
+      self.data = data 
+      self.next = None
 
-headNode.next = secondNode
-secondNode.next = thirdNode
+# LinkedList class
+class LinkedList: 
+    # Function to initialize head 
+    def __init__(self): 
+      self.head = None
 
-# iterate through the linked list
-curNode = headNode
-while curNode:
-  print(curNode.val)
-  curNode = curNode.next
+    # Function to insert a new node at the beginning 
+    def push(self, new_data): 
+      new_node = Node(new_data) 
+      new_node.next = self.head 
+      self.head = new_node 
 
-# insert new listnode with value of 5 in between the secondNode and thirdNode
-curNode = headNode
-while curNode.val != 2:
-  curNode = curNode.next
-newNode = ListNode(5)
-newNode.next = curNode.next
-curNode.next = newNode
 
-# remove the listnode with value of 5
-curNode = headNode
-while curNode.next.val != 5:
-  curNode = curNode.next
-  curNode.next = curNode.next.next
+    # Remove an item from the LinkedList
+    def pop(self, key):
+      temp = self.head
+
+      # If head node itself holds the key to be deleted
+      if(self.head.data == key):
+        self.head = temp.next
+        temp = None
+        return
+
+      # this loop is to just set the prev node
+      while (temp is not None):
+        if(temp.data == key):
+          break
+        else:
+          prev = temp
+          temp = temp.next
+
+      #after the loop just change the next node   
+      if(temp == None):
+        return
+      prev.next = temp.next
+      temp = None
+
+    # Utility function to print it the linked LinkedList 
+    def printList(self): 
+      temp = self.head 
+      while(temp): 
+        print(temp.data) 
+        temp = temp.next
+
+# Driver program for testing 
+llist = LinkedList() 
+llist.push(20) 
+llist.push(4) 
+llist.push(15) 
+llist.push(10) 
+llist.printList()
+llist.pop(4)
+llist.printList()
