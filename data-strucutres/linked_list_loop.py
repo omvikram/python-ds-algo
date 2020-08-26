@@ -1,4 +1,5 @@
 # Python program to detect loop in the linked list 
+# Time Complexity O(n)
 
 # Node class 
 class Node: 
@@ -28,23 +29,39 @@ class LinkedList:
 	def printList(self): 
 		temp = self.head 
 		while(temp): 
-			print (temp.data, end =" ") 
+			print (temp.data) 
 			temp = temp.next
 
     # If we have already has this node in hashmap or set in Python 
     # it means their is a cycle (Because you we encountering the node second time). 
-	def detectLoop(self): 
+	def detectLoopByHashmap(self): 
 		s = set() 
-		temp = self.head 
-		while (temp): 
-		
+		temp = self.head
+
+		while (temp):
 			if (temp in s): 
 				return True
 	
-			s.add(temp) 
-	
+			s.add(temp)
 			temp = temp.next
 		
+		return False
+	
+	# Traverse linked list using two pointers.
+	# Move one pointer(slow_p) by one and another pointer(fast_p) by two.
+	# If these pointers meet at the same node then there is a loop.
+	# If pointers do not meet then linked list doesn't have a loop.
+	def detectLoopByFloydCycle(self):
+		slow_p = self.head
+		fast_p = self.head
+
+		while(slow_p and fast_p and fast_p.next):
+			slow_p = slow_p.next
+			fast_p = fast_p.next.next
+
+			if(slow_p == fast_p):
+				return True
+
 		return False
 
 # Driver program for testing 
@@ -57,7 +74,12 @@ llist.printList()
 # Create a loop for testing 
 llist.head.next.next.next.next = llist.head; 
 
-if( llist.detectLoop()): 
+if( llist.detectLoopByHashmap()): 
+	print ("Loop found") 
+else : 
+	print ("No Loop found") 
+
+if( llist.detectLoopByFloydCycle()): 
 	print ("Loop found") 
 else : 
 	print ("No Loop found") 
