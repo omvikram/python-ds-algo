@@ -1,71 +1,48 @@
 ## A tree is a non-linear list data structure which is represented as class in Python
+## A tree will have its value and child nodes which is of tree class
+
 class TreeNode:
-  def __init__(self, val):
-    self.val = val
-    self.left = None
-    self.right = None
+    def __init__(self, val):
+        self.value = val
+        self.left_child = None
+        self.right_child = None
+   
+    def insert_left(self, value):
+        if self.left_child == None:
+            self.left_child = TreeNode(value)
+        else:
+            new_node = TreeNode(value)
+            new_node.left_child = self.left_child
+            self.left_child = new_node
+
+    def insert_right(self, value):
+        if self.right_child == None:
+            self.right_child = TreeNode(value)
+        else:
+            new_node = TreeNode(value)
+            new_node.right_child = self.right_child
+            self.right_child = new_node
+
 
 # initialization of a tree
 rootNode = TreeNode(1)
 leftNode = TreeNode(2)
 rightNode = TreeNode(3)
 
-rootNode.left = leftNode
-rootNode.right = rightNode
+rootNode.left_child = leftNode
+rootNode.right_child = rightNode
 
-## DFS (Deft First Search algo) - Going deep to the leaf and backtrack.
+print("Tree before insertion")
+print(rootNode.value)
+print(rootNode.left_child.value)
+print(rootNode.right_child.value)
 
-# inorderTraversal of the tree (Left, Root, Right) => L-Roo-R
-def inorderTraversal(root):
-  result = []
-  
-  if not root:
-      return self.result
-  
-  def df(node: TreeNode):
-      if not node:
-          return
-      df(node.left)
-      result.append(node.val)
-      df(node.right)
-  
-  df(root)
-  return result
+rootNode.insert_left(4)
+rootNode.insert_right(5)
 
-# preorderTraversal of the tree (Root, Left, Right) => Roo-L-R
-def preorderTraversal(root):
-  result = []
-  
-  if not root:
-      return result
-  
-  def df(node: TreeNode):
-      if not node:
-          return
-      result.append(node.val)
-      df(node.left)
-      df(node.right)
-  
-  df(root)
-  return result
-
-# postorderTraversal of the tree (Left, Right, Root) => L-R-Roo
-def postorderTraversal(root):
-  result = []
-  
-  if not root:
-      return result
-  
-  def df(node: TreeNode):
-      if not node:
-          return
-      df(node.left)
-      df(node.right)
-      result.append(node.val)
-  
-  df(root)
-  return result
-
-print('inorder: ', inorderTraversal(rootNode))
-print('preorder: ', preorderTraversal(rootNode))
-print('postorder: ', postorderTraversal(rootNode))
+print("Tree after insertion")
+print(rootNode.value)
+print(rootNode.left_child.value)
+print(rootNode.right_child.value)
+print(rootNode.left_child.left_child.value)
+print(rootNode.right_child.right_child.value)
