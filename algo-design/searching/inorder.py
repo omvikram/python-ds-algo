@@ -1,8 +1,8 @@
 class TreeNode:
   def __init__(self, val):
-    self.val = val
-    self.left = None
-    self.right = None
+    self.value = val
+    self.left_child = None
+    self.right_child = None
 
 # inorderTraversal of the tree (Left, Root, Right) => L-Roo-R
 def inorderTraversal(root):
@@ -14,9 +14,9 @@ def inorderTraversal(root):
   def dfs(node: TreeNode):
       if not node:
           return
-      dfs(node.left)
-      result.append(node.val)
-      dfs(node.right)
+      dfs(node.left_child)
+      result.append(node.value)
+      dfs(node.right_child)
   
   dfs(root)
   return result
@@ -27,7 +27,7 @@ rootNode = TreeNode(1)
 leftNode = TreeNode(2)
 rightNode = TreeNode(3)
 
-rootNode.left = leftNode
-rootNode.right = rightNode
+rootNode.left_child = leftNode
+rootNode.right_child = rightNode
 
 print('inorder: ', inorderTraversal(rootNode))

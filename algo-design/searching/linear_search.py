@@ -1,6 +1,5 @@
 ## Linear Search using O(n)
-def search(arr, n, x): 
-  
+def search(arr, n, x):
     for i in range (0, n): 
         if (arr[i] == x): 
             return i; 
