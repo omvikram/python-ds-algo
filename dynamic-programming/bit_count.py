@@ -1,7 +1,7 @@
 # Function to get no of bits in binary representation of positive integer 
 def countBits(n): 
-
 	count = 0
+	# using right shift operator
 	while (n): 
 		count += 1
 		n >>= 1
@@ -12,7 +12,7 @@ def countBits(n):
 i = 65
 print(countBits(i)) 
 
-
+##########################################################################
 
 # Python3 program to find total bit in given number 
 import math 

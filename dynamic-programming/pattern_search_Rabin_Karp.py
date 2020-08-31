@@ -11,6 +11,8 @@ y = len(pat)
 
 pat_hash = str(hash(pat))
 
+# Traverse through each word starting from i = 0 equal to the length
+# This will work only if the exact word is present in the sentence
 for i in range(0, x-y+1):
     substr = txt[i:i+y]
     substr_hash = str(hash(substr))

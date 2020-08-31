@@ -11,11 +11,9 @@
 # The length N of the input list will be in the range [1, 1000].
 
 # SAMPLE INPUT
-
 # 3 4 1 2 5 6 9 0 1 2 3 1
 
 # SAMPLE OUTPUT
-
 # 4
 
 
@@ -24,7 +22,7 @@ def jump_over_numbers(mylist):
     index = 0
     maxjump = 0
     
-    while index < len(mylist):
+    while(index < len(mylist)):
         if(mylist[index] == 0):
             return -1
         index = index + mylist[index]

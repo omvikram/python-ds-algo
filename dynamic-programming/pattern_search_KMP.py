@@ -36,6 +36,8 @@ def KMPSearch(pat, txt):
 			else: 
 				i += 1
 
+# This function creates the lps list which will help in case search pattern
+# has prefix == suffix to reduce the search on searchable text
 def computeLPSArray(pat, M, lps): 
 	len = 0 # length of the previous longest prefix suffix 
 
@@ -50,11 +52,10 @@ def computeLPSArray(pat, M, lps):
 			i += 1
 		else: 
 			# This is tricky. Consider the example. 
-			# AAACAAAA and i = 7. The idea is similar to search step. 
+			# AAACAAAA and i = 7. The idea is similar to search step.
+			# Also, note that we do not increment i here 
 			if len != 0: 
 				len = lps[len-1] 
-
-				# Also, note that we do not increment i here 
 			else: 
 				lps[i] = 0
 				i += 1

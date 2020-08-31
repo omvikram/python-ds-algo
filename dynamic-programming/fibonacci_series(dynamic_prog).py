@@ -1,5 +1,5 @@
 
-# Python program for Memoized version of nth Fibonacci number
+# Python dynamic programming for Memoized version of nth Fibonacci number
 # Top Down approach > using lookup table where we will save each sub results into the lookup table 
   
 # Function to calculate nth Fibonacci number 
@@ -22,8 +22,9 @@ n = 34
 lookup = [None]*(n+1) 
 print ("Fibonacci Number is ", fib(n, lookup)) 
   
+##########################################################################################
 
-# Python program Tabulated (bottom up) version 
+# Python dynamic programming for Tabulated (bottom up) version of nth Fibonacci number
 # Bottum Up approach > In this approach we will calculate all the sub results and store it
 
 # Function to calculate nth Fibonacci number 

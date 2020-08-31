@@ -1,6 +1,6 @@
 # Dynamic programming Python implementation of LIS problem 
-
 # lis returns length of the longest increasing subsequence in arr of size n 
+
 def maxLIS(arr): 
 	n = len(arr) 
 
@@ -33,6 +33,7 @@ print ("LIS length of arr is ", maxLIS(arr))
 print ("LIS length of arr1 is ", maxLIS(arr1))
 print ("LIS length of arr2 is ", maxLIS(arr2))
 
+##############################################################################################
 
 # Given a list of N integers find the longest increasing subsequence in this list.
 # Example
@@ -55,9 +56,10 @@ def lisNumbers(arr):
 		for j in range(0 , i): 
 			if arr[i] > arr[j] and lis[i] < lis[j] + 1 : 
 				lis[i] = lis[j]+1
-	print(arr)
-	print(lis)
+	# print(arr)
+	# print(lis)
 	myLISlist = []
+
 	# Print the LIS sequence from all LIS values 
 	for i in range(0, len(lis)): 
 		if(i == 0):

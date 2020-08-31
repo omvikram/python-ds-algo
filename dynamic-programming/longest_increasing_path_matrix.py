@@ -25,7 +25,8 @@ def LIP(dp, mat, n, m, x, y):
 		if (y + 1 < m and mat[x][y] < mat[x][y + 1]): 
 			result = max(result, 1 + LIP(dp, mat, n, m, x, y + 1)) 
 
-		dp[x][y] = result 
+		dp[x][y] = result
+
 	return dp[x][y] 
 
 # Wrapper function 

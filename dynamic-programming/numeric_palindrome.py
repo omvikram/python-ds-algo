@@ -22,7 +22,7 @@
 # 123	false
 
 def is_numeric_palindrome(num):
-    
+    # Store each number in List
     is_palindrome = False
     if(num > 0 and num < 10):
         is_palindrome = True
@@ -32,15 +32,15 @@ def is_numeric_palindrome(num):
         for each in str(num):
             mylist.append(int(each))
     
-  #  print(mylist)
+    # Compare the first and last number in List till mid index
     length = len(mylist)
     midlength = int(length/2)
     for i in range(0, midlength):
-            if(mylist[i] == mylist[length-i-1]):
-                is_palindrome = True
-            else:
-                is_palindrome = False
-                break
+        if(mylist[i] == mylist[length-i-1]):
+            is_palindrome = True
+        else:
+            is_palindrome = False
+            break
     return is_palindrome
 
 print(is_numeric_palindrome(1))
