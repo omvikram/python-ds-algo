@@ -16,7 +16,7 @@
 #              => Non-Liner(Graph, Tree)
 #           - Tuple  
 #           - Set
-#           - Ditionary
+#           - Dictionary
 #           - Array
 #           - File
 

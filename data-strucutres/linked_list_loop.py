@@ -1,4 +1,5 @@
 # Python program to detect loop in the linked list 
+# Will check 2 methods 1) by Hashmap 2) by using 2 pointers
 # Time Complexity O(n)
 
 # Node class 

@@ -1,4 +1,6 @@
 ## A Graph is a non-linear list data structure which is represented as class in Python
+## this class will have a dictionary of nodes with list of their neighbours 
+## dictionary key as node and list of nodes as values (neighbours)
 class Graph:
     
     graph_dict={}

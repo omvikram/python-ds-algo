@@ -1,3 +1,5 @@
+# Python Non-Primitive DS which is implemented using List > Linear List Type > Stack
+
 class Stack:
   # by default pass in [] as inivial value
   def __init__(self,initialVal=[]):

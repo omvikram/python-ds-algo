@@ -1,3 +1,5 @@
+# Tuple is one of the Python Non Primitive Data Structure which is immutable (values an't be changed)
+
 x_tuple = ()
 y_tuple = ()
 print("Tuples are initialised")
@@ -21,3 +23,7 @@ print(nested_tuple)
 print(list_tuple*2)
 
 #finally you can delete a tuple also
+del x_tuple
+del y_tuple
+del z_tuple
+del nested_tuple

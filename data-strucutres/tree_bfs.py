@@ -10,7 +10,6 @@ class TreeNode():
         self.right_child = None
 
 
-
 def printLevelOrderNodes(root):
     height = calculateHeight(root)
     print("Level order traversal of Tree of height {}".format(height))

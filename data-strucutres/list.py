@@ -1,3 +1,5 @@
+## Python list the most used data structure which can act as Array, Stack and Queue in Linear DS
+
 x =[]
 print(type(x))
 
