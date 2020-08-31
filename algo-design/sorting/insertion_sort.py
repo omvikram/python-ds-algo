@@ -1,4 +1,4 @@
-## Function to perform Insertion sort 
+## Function to perform Insertion sort - Marker and Partition
 ## Take the min value in the list and then try to insert it in the best possible location
 ## Divide the list in Sorted and Unsorted list items and pick the 2nd element as marker 
 ## Now you will have left side as Sorted list while Right side of the elements as Unsorted list

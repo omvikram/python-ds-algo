@@ -5,8 +5,9 @@
 ## Time Complexity - O(n**2)
 
 def bubble_sort(list):
-    list_length = len(list)
-    for i in range(list_length - 1, 0, -1):
+    list_length = len(list) - 1
+    
+    for i in range(list_length, 0, -1):
         for j in range(i):
             if(list[j] > list[j+1]):
                 temp = list[j]

@@ -1,5 +1,5 @@
 ## Merge sort first divides the array into equal halves and then merge them in a sorted manner.
-## After divisio both partitions are unsorted but during the merge we compare each element and 
+## After division, both partitions are unsorted but during the Merge process we compare each element 
 ## Compare and add smaller items on new list and remove it from the right/left partition list 
 ## Time Complexity - O(nlogn)
 
@@ -17,25 +17,26 @@ def merge_sort(unsorted_list):
 
     print(left_list)
     print(right_list)
-    return list(merge(left_list, right_list))
+    return list(mergeLists(left_list, right_list))
 
-# Merge the sorted halves
-def merge(left_half,right_half):
-
-    res = []
+# Compare and Merge the sorted halves
+def mergeLists(left_half,right_half):
+    resultList = []
+    
     while len(left_half) != 0 and len(right_half) != 0:
         if left_half[0] < right_half[0]:
-            res.append(left_half[0])
+            resultList.append(left_half[0])
             left_half.remove(left_half[0])
         else:
-            res.append(right_half[0])
+            resultList.append(right_half[0])
             right_half.remove(right_half[0])
             
     if len(left_half) == 0:
-        res = res + right_half
+        resultList = resultList + right_half
     else:
-        res = res + left_half
-    return res
+        resultList = resultList + left_half
+
+    return resultList
 
 unsorted_list = [64, 34, 25, 12, 22, 11, 90]
 

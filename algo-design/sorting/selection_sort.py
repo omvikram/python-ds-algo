@@ -1,7 +1,7 @@
 ## Function for implementation of Selection Sort 
-## Traverse through all array elements 
-## Find the minimum element in remaining unsorted array
-## Swap the found minimum element with the first element	
+## Traverse through all array elements (one by one) -> i
+## Find the minimum element in remaining unsorted array -> j 
+## Swap the found minimum element with the first element -> j with i	
 ## Time Complexity - O(n**2)
 
 import sys 

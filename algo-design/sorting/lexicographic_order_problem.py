@@ -6,7 +6,7 @@ def sort_the_files(n, result=[]):
         result.append("IMG" + str(i) + ".jpg")
     
     # Python uses Timsort in its sort() method. 
-    # It is a hybrid sorting algorithm that uses both Merge sort and Insertion sorting techniques.
+    # It is a hybrid sorting algorithm that uses both "Merge sort and Insertion sort" techniques.
     result.sort() 
     return result
 
