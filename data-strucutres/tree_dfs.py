@@ -1,5 +1,5 @@
 ## A tree is a non-linear list data structure which is represented as class in Python
-## DFS (Deft First Search algo) - Going deep to the leaf and backtrack.
+## DFS (Depth First Search algo) - Going deep to the leaf and backtrack.
 
 class TreeNode:
   def __init__(self, val):
@@ -17,15 +17,15 @@ rootNode.right_child = rightNode
 
 # preorderTraversal of the tree (Root, Left, Right) => Roo-L-R
 def preorderTraversal(root):
-  result = []
+  resultList = []
   
   if not root:
-      return result
+      return resultList
   
   def dfs(node):
       if not node:
           return
-      result.append(node.value)
+      resultList.append(node.value)
       dfs(node.left_child)
       dfs(node.right_child)
   
@@ -34,37 +34,37 @@ def preorderTraversal(root):
 
 # inorderTraversal of the tree (Left, Root, Right) => L-Roo-R
 def inorderTraversal(root):
-  result = []
+  resultList = []
   
   if not root:
-      return self.result
+      return resultList
   
   def dfs(node):
       if not node:
           return
       dfs(node.left_child)
-      result.append(node.value)
+      resultList.append(node.value)
       dfs(node.right_child)
   
   dfs(root)
-  return result
+  return resultList
 
 # postorderTraversal of the tree (Left, Right, Root) => L-R-Roo
 def postorderTraversal(root):
-  result = []
+  resultList = []
   
   if not root:
-      return result
+      return resultList
   
   def dfs(node):
       if not node:
           return
       dfs(node.left_child)
       dfs(node.right_child)
-      result.append(node.value)
+      resultList.append(node.value)
   
   dfs(root)
-  return result
+  return resultList
 
 print('inorder: ', inorderTraversal(rootNode))
 print('preorder: ', preorderTraversal(rootNode))
