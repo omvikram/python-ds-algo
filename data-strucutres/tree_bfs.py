@@ -9,10 +9,13 @@ class TreeNode():
         self.left_child = None
         self.right_child = None
 
-
+## Find the height of the tree recursively and then 
+## print each level nodes based on the height from root to leaf nodes
 def printLevelOrderNodes(root):
     height = calculateHeight(root)
+    
     print("Level order traversal of Tree of height {}".format(height))
+    
     for h in range(1, height+1):
         printSpecificLevelNodes(root, h)
 
